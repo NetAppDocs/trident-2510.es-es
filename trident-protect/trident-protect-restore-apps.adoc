@@ -536,6 +536,9 @@ tridentctl-protect create snapshotrestore <my_restore_name> \
 
 Puedes restaurar una instantánea al espacio de nombres original en cualquier momento.
 
+
+NOTE: ##Si tu aplicación usa varios espacios de nombres y estos espacios de nombres tienen PVCs con el mismo nombre, las operaciones de restauración de instantáneas (tanto in situ como a un nuevo espacio de nombres) no funcionarán correctamente. Todos los volúmenes restaurados tendrán los mismos datos en vez de los datos correctos para cada espacio de nombres. Usa la restauración de copias de seguridad en vez de la restauración de instantáneas, o actualiza a la versión 26.02 o posterior que soluciona este problema.##
+
 .Antes de empezar
 Asegúrate de que la caducidad del token de sesión de AWS sea suficiente para cualquier operación de restauración s3 de larga duración. Si el token caduca durante la operación de restauración, la operación puede fallar.
 
