@@ -21,7 +21,7 @@ Puedes actualizar Trident usando el operador Trident, ya sea manualmente o usand
 Puedes actualizar desde una instalación de operador Trident con alcance de clúster a otra instalación de operador Trident con alcance de clúster. Todas las versiones de Trident usan un operador con alcance de clúster.
 
 
-NOTE: Para actualizar desde Trident que se instaló utilizando el operador de espacio de nombres (versiones 20.07 a 20.10), usa las instrucciones de actualización para link:../earlier-versions.html["tu versión instalada"] de Trident.
+NOTE: Para actualizar desde Trident que fue instalado usando el operador con alcance de espacio de nombres (versiones 20.07 a 20.10), usa las instrucciones de actualización para tu versión instalada de Trident.
 
 .Acerca de esta tarea
 Trident proporciona un archivo de paquete que puedes usar para instalar el operador y crear objetos asociados para tu versión de Kubernetes.
