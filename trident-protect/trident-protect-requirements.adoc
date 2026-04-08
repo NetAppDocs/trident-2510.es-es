@@ -36,6 +36,7 @@ Trident Protect es compatible con una amplia gama de ofertas de Kubernetes total
 * Las copias de seguridad de Trident Protect solo son compatibles con los nodos de cómputo Linux. Los nodos de cómputo Windows no son compatibles para las operaciones de backup.
 * Asegúrate de que el clúster en el que instales Trident Protect esté configurado con un controlador de instantáneas en funcionamiento y los CRD relacionados. Para instalar un controlador de instantáneas, consulta https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html#deploy-a-volume-snapshot-controller["estas instrucciones"].
 * Asegúrate de que existe al menos un VolumeSnapshotClass. Para más información, consulta link:https://docs.netapp.com/us-en/trident_main/trident-reference/objects.html#kubernetes-volumesnapshotclass-objects["VolumeSnapshotClass"].
+* Se requiere Helm 4.x o posterior para instalar Trident Protect.
 
 
 ====
