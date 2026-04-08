@@ -332,8 +332,11 @@ Al ejecutar este comando se muestran las copias de seguridad disponibles en el A
 | production1 | wordpress | backup | wordpress-bkup-2| 2024-10-30 08:37:40 (UTC)| backuppath2 |
 +-------------+-----------+--------+-----------------+--------------------------+-------------+
 ----
-. Restaura la aplicación en el clúster de destino usando el nombre AppVault y la ruta de archivo: nota: cuando uses un CR, asegúrate de que el espacio de nombres previsto para la restauración de la aplicación exista en el clúster de destino.
+. Restaura la aplicación en el clúster de destino usando el nombre AppVault y la ruta de archivo:
 
+
+
+NOTE: Cuando utilices un CR, asegúrate de que el espacio de nombres previsto para la restauración de la aplicación existe en el clúster de destino.
 
 [role="tabbed-block"]
 ====
