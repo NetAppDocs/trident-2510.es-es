@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: trident-get-started/kubernetes-deploy-helm-mirror.html 
+permalink: trident-install/kubernetes-deploy-helm-mirror.html 
 keywords: deploy, Trident, operator, helm, helm chart, configuration, values, offline, air gap, gap, registry 
 summary: Puedes desplegar el operador Trident e instalar Trident usando Helm. Este proceso aplica a instalaciones donde las imágenes de contenedor requeridas por Trident se almacenan en un registro privado. 
 ---
@@ -38,12 +38,12 @@ El uso de una configuración sin multivía o el uso de `find_multipaths: yes` o 
 
 == Implementa el operador Trident e instala Trident usando Helm
 
-Usando el Trident link:https://netapp.github.io/trident-helm-chart["Helm Chart"^] puedes desplegar el operador Trident e instalar Trident en un solo paso.
+Usando el link:https://artifacthub.io/packages/helm/netapp-trident/trident-operator["Helm Chart"^] de Trident, puedes desplegar el operador Trident e instalar Trident en un solo paso.
 
-Revisa link:../trident-get-started/kubernetes-deploy.html["la visión general de la instalación"] para asegurarte de que cumpliste los requisitos previos de instalación y seleccionaste la opción de instalación correcta para tu entorno.
+Revisa link:../trident-install/kubernetes-deploy.html["la visión general de la instalación"] para asegurarte de que cumpliste los requisitos previos de instalación y seleccionaste la opción de instalación correcta para tu entorno.
 
 .Antes de empezar
-Además de link:../trident-get-started/kubernetes-deploy.html#before-you-deploy["requisitos previos de despliegue"] tú necesitas link:https://v3.helm.sh/["Helm versión 3"^].
+Además de link:../trident-install/kubernetes-deploy.html#before-you-deploy["requisitos previos de despliegue"] tú necesitas link:https://v3.helm.sh/["Helm versión 3"^].
 
 
 IMPORTANT: Cuando instales Trident en un repositorio privado, si estás usando el modificador `imageRegistry` para especificar la ubicación del repositorio, no uses `/netapp/` en la ruta del repositorio.

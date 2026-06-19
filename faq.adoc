@@ -62,7 +62,7 @@ No. No hay cambios en lo que respecta a la experiencia del usuario y las funcion
 
 === ¿Trident admite una instalación sin conexión desde un registro privado?
 
-Sí, Trident puede instalarse sin conexión. Consulta link:../trident-get-started/kubernetes-deploy.html["Conoce la instalación de Trident"^].
+Sí, Trident puede instalarse sin conexión. Consulta link:trident-install/kubernetes-deploy.html["Conoce la instalación de Trident"].
 
 
 
@@ -86,13 +86,13 @@ Trident lee del Kubernetes API Server para determinar cuándo las aplicaciones s
 
 === ¿Qué roles y privilegios utiliza Trident?
 
-El instalador de Trident crea un ClusterRole de Kubernetes, que tiene acceso específico a los recursos PersistentVolume, PersistentVolumeClaim, StorageClass y Secret del clúster de Kubernetes. Consulta link:trident-get-started/kubernetes-customize-deploy-tridentctl.html["Personaliza la instalación de tridentctl"^].
+El instalador de Trident crea un ClusterRole de Kubernetes, que tiene acceso específico a los recursos PersistentVolume, PersistentVolumeClaim, StorageClass y Secret del clúster de Kubernetes. Consulta link:trident-install/kubernetes-customize-deploy-tridentctl.html["Personaliza la instalación de tridentctl"].
 
 
 
 === ¿Puedo generar localmente los archivos de manifiesto exactos que Trident usa para la instalación?
 
-Puedes generar y modificar localmente los archivos de manifiesto exactos que Trident usa para la instalación, si lo necesitas. Consulta link:trident-get-started/kubernetes-customize-deploy-tridentctl.html["Personaliza la instalación de tridentctl"^].
+Puedes generar y modificar localmente los archivos de manifiesto exactos que Trident usa para la instalación, si lo necesitas. Consulta link:trident-install/kubernetes-customize-deploy-tridentctl.html["Personaliza la instalación de tridentctl"].
 
 
 

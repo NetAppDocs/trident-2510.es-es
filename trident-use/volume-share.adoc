@@ -170,6 +170,5 @@ Banderas:
 
 Para obtener más información sobre el acceso a volúmenes entre espacios de nombres:
 
-* Visita link:https://cloud.netapp.com/blog/astra-blg-sharing-volumes-between-namespaces-say-hello-to-cross-namespace-volume-access["Compartir volúmenes entre espacios de nombres: di hola al acceso a volúmenes entre espacios de nombres"^].
 * Mira la demo en link:https://media.netapp.com/page/9071d19d-1438-5ed3-a7aa-ea4d73c28b7f/solutions-products["NetAppTV"^].
 

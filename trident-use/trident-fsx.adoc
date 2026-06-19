@@ -43,7 +43,7 @@ NOTE: Asegúrate de seguir los pasos de preparación de nodo necesarios para Ama
 +
 ** Los volúmenes SMB son compatibles usando solo el `ontap-nas` driver.
 ** Los volúmenes SMB no son compatibles con el complemento Trident EKS.
-** Trident solo admite volúmenes SMB montados en pods que se ejecutan en nodos Windows. Consulta link:../trident-use/trident-fsx-storage-backend.html#prepare-to-provision-smb-volumes["Prepárate para aprovisionar volúmenes SMB"] para más detalles.
+** Trident solo admite volúmenes SMB montados en pods que se ejecutan en nodos Windows. Consulta link:../trident-use/worker-node-prep.html#prepare-to-provision-smb-volumes["Prepárate para aprovisionar volúmenes SMB"] para más detalles.
 
 
 * Antes de Trident 24.02, los volúmenes creados en sistemas de archivos de Amazon FSx que tenían copias de seguridad automáticas habilitadas no podían ser eliminados por Trident. Para evitar este problema en Trident 24.02 o versiones posteriores, especifica el `fsxFilesystemID`, AWS `apiRegion`, AWS `apikey` y AWS `secretKey` en el archivo de configuración del backend para AWS FSx for ONTAP.

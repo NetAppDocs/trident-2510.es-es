@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: trident-get-started/kubernetes-deploy-tridentctl.html 
+permalink: trident-install/kubernetes-deploy-tridentctl.html 
 keywords: deploy, Trident, methods, tridentctl, windows 
 summary: 'Puedes instalar Trident usando `tridentctl`. Este proceso aplica a instalaciones donde las imágenes de contenedor requeridas por Trident se almacenan en un registro privado o no.' 
 ---
@@ -35,10 +35,10 @@ El uso de una configuración sin multivía o el uso de `find_multipaths: yes` o 
 
 == Instala Trident usando `tridentctl`
 
-Revisa link:../trident-get-started/kubernetes-deploy.html["la visión general de la instalación"] para asegurarte de que cumpliste los requisitos previos de instalación y seleccionaste la opción de instalación correcta para tu entorno.
+Revisa link:../trident-install/kubernetes-deploy.html["la visión general de la instalación"] para asegurarte de que cumpliste los requisitos previos de instalación y seleccionaste la opción de instalación correcta para tu entorno.
 
 .Antes de empezar
-Antes de comenzar la instalación, inicia sesión en el host Linux y verifica que está gestionando un servidor en funcionamiento, link:requirements.html["clúster de Kubernetes compatible"^] y que tienes los privilegios necesarios.
+Antes de comenzar la instalación, inicia sesión en el host Linux y verifica que está gestionando un servidor en funcionamiento, link:../trident-get-started/requirements.html["clúster de Kubernetes compatible"] y que tienes los privilegios necesarios.
 
 
 NOTE: Con OpenShift, usa `oc` en vez de `kubectl` en todos los ejemplos que siguen, y primero inicia sesión como *system:admin* ejecutando `oc login -u system:admin` o `oc login -u kube-admin`.
@@ -151,7 +151,7 @@ trident-controller-679648bd45-cv2mx   6/6     Running   0          5m29s
 trident-node-linux-vgc8n              2/2     Running   0          5m29s
 ----
 
-NOTE: Si el instalador no se completa correctamente o `trident-controller-<generated id>` (`trident-csi-<generated id>` en versiones anteriores a 23.01) no tiene un estado *Running*, la plataforma no se instaló. Usa `-d` para link:../troubleshooting.html#troubleshooting-an-unsuccessful-trident-deployment-using-tridentctl["activa el modo de depuración"] y solucionar el problema.
+NOTE: Si el instalador no se completa correctamente o `trident-controller-<generated id>` (`trident-csi-<generated id>` en versiones anteriores a 23.01) no tiene un estado *Running*, la plataforma no se instaló. Usa `-d` para link:../troubleshooting.html#unsuccessful-trident-deployment-using-tridentctl["activa el modo de depuración"] y solucionar el problema.
 
 
 

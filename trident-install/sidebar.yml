@@ -3,28 +3,28 @@ section: trident-install
 title: Instala Trident
 entries:
 - title: Resumen de la instalación
-  url: "/trident-get-started/kubernetes-deploy.html"
+  url: "/trident-install/kubernetes-deploy.html"
 - title: Instala usando el operador Trident
   entries:
   - title: Implementa manualmente el operador Trident (Standard)
-    url: "/trident-get-started/kubernetes-deploy-operator.html"
+    url: "/trident-install/kubernetes-deploy-operator.html"
   - title: Despliega manualmente el operador Trident (sin conexión)
-    url: "/trident-get-started/kubernetes-deploy-operator-mirror.html"
+    url: "/trident-install/kubernetes-deploy-operator-mirror.html"
   - title: Usa Trident Helm Chart (estándar)
-    url: "/trident-get-started/kubernetes-deploy-helm.html"
+    url: "/trident-install/kubernetes-deploy-helm.html"
   - title: Usa el Helm Chart de Trident (sin conexión)
-    url: "/trident-get-started/kubernetes-deploy-helm-mirror.html"
+    url: "/trident-install/kubernetes-deploy-helm-mirror.html"
   - title: Personaliza la instalación del operador Trident
-    url: "/trident-get-started/kubernetes-customize-deploy.html"
+    url: "/trident-install/kubernetes-customize-deploy.html"
 - title: Instala usando tridentctl
   entries:
   - title: Instala usando tridentctl
-    url: "/trident-get-started/kubernetes-deploy-tridentctl.html"
+    url: "/trident-install/kubernetes-deploy-tridentctl.html"
   - title: Personaliza la instalación de tridentctl
-    url: "/trident-get-started/kubernetes-customize-deploy-tridentctl.html"
+    url: "/trident-install/kubernetes-customize-deploy-tridentctl.html"
 - title: Instala usando el operador certificado de OpenShift
   entries:
   - title: Instala Trident usando OpenShift OperatorHub
-    url: "/trident-get-started/openshift-operator-deploy.html"
+    url: "/trident-install/openshift-operator-deploy.html"
   - title: Cambia del operador comunitario Trident al operador certificado OpenShift
-    url: "/trident-get-started/openshift-certified-operator-deploy.html"
+    url: "/trident-install/openshift-certified-operator-deploy.html"

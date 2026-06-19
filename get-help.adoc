@@ -107,5 +107,5 @@ Para obtener ayuda con Trident, crea un paquete de soporte usando `tridentctl lo
 == Para más información
 
 * link:https://github.com/NetApp/trident["Recursos de Trident"^]
-* link:https://cloud.netapp.com/kubernetes-hub["Kubernetes Hub"^]
+* link:https://www.netapp.com/console/["Kubernetes Hub"^]
 
