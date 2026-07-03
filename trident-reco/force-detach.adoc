@@ -150,7 +150,7 @@ Los TNR pueden estar en uno de los siguientes estados:
 
 
 
-NOTE: También puedes usar formas alternativas para detectar fallas de nodos como se especifica en la sección de link:..trident-reco/force-detach.html#integrating-custom-node-health-check-solutions["Integración de soluciones personalizadas de comprobación del estado de los nodos"] abajo.
+NOTE: También puedes usar formas alternativas para detectar fallas de nodos como se especifica en la sección de link:force-detach.html#integrating-custom-node-health-check-solutions["Integración de soluciones personalizadas de comprobación del estado de los nodos"] abajo.
 
 Consulta link:https://www.redhat.com/en/blog/node-health-check-operator["Operador de comprobación de estado del nodo"^] para más información.
 

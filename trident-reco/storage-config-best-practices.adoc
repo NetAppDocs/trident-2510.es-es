@@ -274,7 +274,7 @@ IOPS máximos permitidos en un escenario de ráfaga corta.
 
 NOTE: Aunque los IOPS máximos y los IOPS en ráfaga se pueden configurar hasta 200,000, el rendimiento máximo real de un volumen está limitado por el uso del clúster y el rendimiento por nodo.
 
-El tamaño de bloque y el ancho de banda influyen directamente en el número de IOPS. A medida que aumenta el tamaño de bloque, el sistema aumenta el ancho de banda hasta el nivel necesario para procesar los tamaños de bloque más grandes. A medida que aumenta el ancho de banda, disminuye el número de IOPS que el sistema puede alcanzar. Consulta  https://www.netapp.com/pdf.html?item=/media/10502-tr-4644pdf.pdf["Calidad de servicio de SolidFire"^] para más información sobre QoS y rendimiento.
+El tamaño de bloque y el ancho de banda influyen directamente en el número de IOPS. A medida que aumenta el tamaño de los bloques, el sistema incrementa el ancho de banda hasta el nivel necesario para procesar esos bloques más grandes. A medida que aumenta el ancho de banda, disminuye el número de IOPS que el sistema es capaz de alcanzar. Consulta  https://www.netapp.com/pdf.html?item=/media/10502-tr-4644.pdf["Calidad de servicio de SolidFire"^] para más información sobre QoS y rendimiento.
 
 
 
@@ -304,7 +304,7 @@ A continuación, se incluye documentación sobre las mejores prácticas. Busca e
 
 *Software Element*
 
-* https://www.netapp.com/pdf.html?item=/media/10507-tr4639pdf.pdf["Configurar SolidFire para Linux"^]
+* https://www.netapp.com/pdf.html?item=/media/10507-tr4639.pdf["Configurar SolidFire para Linux"^]
 
 
 *NetApp HCI*
@@ -317,9 +317,9 @@ A continuación, se incluye documentación sobre las mejores prácticas. Busca e
 
 * https://docs.netapp.com/us-en/ontap-apps-dbs/mysql/mysql-overview.html["Mejores prácticas para MySQL en ONTAP"^]
 * https://www.netapp.com/pdf.html?item=/media/10510-tr-4605.pdf["Prácticas recomendadas para MySQL en SolidFire"^]
-* https://www.netapp.com/pdf.html?item=/media/10513-tr-4635pdf.pdf["NetApp SolidFire y Cassandra"^]
-* https://www.netapp.com/pdf.html?item=/media/10511-tr4606pdf.pdf["Prácticas recomendadas de Oracle en SolidFire"^]
-* https://www.netapp.com/pdf.html?item=/media/10512-tr-4610pdf.pdf["Mejores prácticas de PostgreSQL en SolidFire"^]
+* https://www.netapp.com/pdf.html?item=/media/10513-tr-4635.pdf["NetApp SolidFire y Cassandra"^]
+* https://www.netapp.com/pdf.html?item=/media/10511-tr4606.pdf["Prácticas recomendadas de Oracle en SolidFire"^]
+* https://www.netapp.com/pdf.html?item=/media/10512-tr-4610.pdf["Mejores prácticas de PostgreSQL en SolidFire"^]
 
 
 No todas las aplicaciones tienen directrices específicas, es importante trabajar con tu equipo de NetApp y usar el  https://www.netapp.com/search/["Biblioteca de NetApp"^] para encontrar la documentación más actualizada.
