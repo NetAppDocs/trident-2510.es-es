@@ -18,6 +18,7 @@ Puedes personalizar las operaciones de restauración usando configuraciones avan
 
 
 
+[[namespace-annotations-and-labels-during-restore-and-failover-operations]]
 == Anotaciones y etiquetas de namespace durante las operaciones de restauración y conmutación por error
 
 Durante las operaciones de restauración y conmutación por error, las etiquetas y anotaciones en el espacio de nombres de destino se hacen coincidir con las etiquetas y anotaciones en el espacio de nombres de origen. Las etiquetas o anotaciones del espacio de nombres de origen que no existen en el espacio de nombres de destino se añaden, y cualquier etiqueta o anotación que ya exista se sobrescribe para que coincida con el valor del espacio de nombres de origen. Las etiquetas o anotaciones que existen solo en el espacio de nombres de destino permanecen sin cambios.
@@ -40,6 +41,7 @@ Si instalaste la aplicación de origen usando Helm con la `--create-namespace` f
 
 
 
+[[example]]
 === Ejemplo
 
 El siguiente ejemplo presenta un espacio de nombres de origen y uno de destino, cada uno con anotaciones y etiquetas diferentes. Puedes ver el estado del espacio de nombres de destino antes y después de la operación, y cómo se combinan o sobrescriben las anotaciones y etiquetas en el espacio de nombres de destino.
@@ -102,12 +104,14 @@ La siguiente tabla ilustra el estado del espacio de nombres de destino de ejempl
 |===
 
 
+[[supported-fields]]
 == Campos compatibles
 
 Esta sección describe los campos adicionales disponibles para las operaciones de restauración.
 
 
 
+[[storage-class-mapping]]
 === Asignación de clases de almacenamiento
 
 El atributo `spec.storageClassMapping` define una asignación de una clase de almacenamiento presente en la aplicación de origen a una nueva clase de almacenamiento en el clúster de destino. Puedes usar esto cuando migres aplicaciones entre clústeres con diferentes clases de almacenamiento o cuando cambies el backend de almacenamiento para operaciones de BackupRestore.
@@ -124,6 +128,7 @@ storageClassMapping:
 ----
 
 
+[[supported-annotations]]
 == Anotaciones compatibles
 
 En esta sección se enumeran las anotaciones admitidas para configurar diversos comportamientos en el sistema. Si el usuario no establece explícitamente una anotación, el sistema usará el valor predeterminado.

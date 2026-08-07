@@ -16,6 +16,7 @@ Conoce las opciones de configuración de backend para Amazon FSx for ONTAP. Esta
 
 
 
+[[backend-configuration-options]]
 == Opciones de configuración del backend
 
 Consulta la siguiente tabla para ver las opciones de configuración del backend:
@@ -108,6 +109,7 @@ Consulta la siguiente tabla para ver las opciones de configuración del backend:
 |===
 
 
+[[update-datalif-after-initial-configuration]]
 === Actualiza `dataLIF` después de la configuración inicial
 
 Puedes cambiar el dataLIF después de la configuración inicial ejecutando el siguiente comando para proporcionar el nuevo archivo JSON del backend con el dataLIF actualizado.
@@ -121,6 +123,7 @@ NOTE: Si los PVC están conectados a uno o varios pods, tienes que desactivar to
 
 
 
+[[backend-configuration-options-for-provisioning-volumes]]
 == Opciones de configuración de backend para aprovisionar volúmenes
 
 Puedes controlar el aprovisionamiento predeterminado usando estas opciones en la  `defaults` sección de la configuración. Por ejemplo, mira los ejemplos de configuración abajo.
@@ -154,7 +157,7 @@ Puedes controlar el aprovisionamiento predeterminado usando estas opciones en la
 | `encryption` | Habilita NetApp Volume Encryption (NVE) en el nuevo volumen; el valor predeterminado es  `false`. NVE debe tener licencia y estar habilitado en el clúster para usar esta opción. Si NAE está habilitado en el backend, cualquier volumen aprovisionado en Trident tendrá NAE habilitado. Para más información, consulta: link:../trident-reco/security-reco.html["Cómo funciona Trident con NVE y NAE"]. | `false` 
 
 
-| `luksEncryption` | Habilita el cifrado LUKS. Consulta link:../trident-reco/security-reco.html#Use-Linux-Unified-Key-Setup-(LUKS)["Usa Linux Unified Key Setup (LUKS)"]. Solo SAN. | "" 
+| `luksEncryption` | Activa el cifrado LUKS. Consulta link:../trident-reco/security-luks.html["Usa Linux Unified Key Setup (LUKS)"]. Solo para SAN. | "" 
 
 
 | `tieringPolicy` | Política de tiering a usar	`none` |  
@@ -167,6 +170,7 @@ Puedes controlar el aprovisionamiento predeterminado usando estas opciones en la
 |===
 
 
+[[example-configurations]]
 == Configuraciones de ejemplo
 
 .Configuración de la clase de almacenamiento para volúmenes SMB

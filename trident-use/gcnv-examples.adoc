@@ -16,6 +16,7 @@ Conoce las opciones de configuración de backend para Google Cloud NetApp Volume
 
 
 
+[[backend-configuration-options]]
 == Opciones de configuración del backend
 
 Cada backend aprovisiona volúmenes en una única región de Google Cloud. Para crear volúmenes en otras regiones, puedes definir backends adicionales.
@@ -74,6 +75,7 @@ Cada backend aprovisiona volúmenes en una única región de Google Cloud. Para 
 |===
 
 
+[[volume-provisioning-options]]
 == Opciones de aprovisionamiento de volumen
 
 Puedes controlar el aprovisionamiento de volúmenes predeterminados en la sección  `defaults` del archivo de configuración.
@@ -96,6 +98,7 @@ Puedes controlar el aprovisionamiento de volúmenes predeterminados en la secci�
 |===
 
 
+[[example-configurations]]
 == Configuraciones de ejemplo
 
 Los siguientes ejemplos muestran configuraciones básicas que dejan la mayoría de los parámetros en sus valores predeterminados. Esta es la forma más fácil de definir un backend.
@@ -339,6 +342,7 @@ supportedTopologies:
 ====
 
 
+[[whats-next]]
 == ¿Qué sigue?
 
 Después de crear el archivo de configuración de backend, ejecuta el siguiente comando:
@@ -366,6 +370,7 @@ Después de identificar y corregir el problema con el archivo de configuración,
 
 
 
+[[storage-class-definitions]]
 == Definiciones de clases de almacenamiento
 
 La siguiente es una  `StorageClass`definición básica que se refiere al backend de arriba.
@@ -419,6 +424,7 @@ Para más detalles sobre las clases de almacenamiento, consulta link:../trident-
 
 
 
+[[example-definitions-for-smb-volumes]]
 === Definiciones de ejemplo para volúmenes SMB
 
 Usando  `nasType`,  `node-stage-secret-name` y  `node-stage-secret-namespace`, puedes especificar un volumen SMB y proporcionar las credenciales necesarias de Active Directory. Cualquier usuario/contraseña de Active Directory, con o sin permisos, puede usarse para el secreto de la etapa del nodo.
@@ -479,6 +485,7 @@ NOTE: `nasType: smb`filtros para grupos que admiten volúmenes SMB. `nasType: nf
 
 
 
+[[pvc-definition-example]]
 === Ejemplo de definición de PVC
 
 [source, yaml]

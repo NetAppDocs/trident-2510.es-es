@@ -16,6 +16,7 @@ Un backend define la relación entre Trident y un sistema de almacenamiento. Le 
 
 
 
+[[tridentbackendconfig]]
 == `TridentBackendConfig`
 
 `TridentBackendConfig` (`tbc`, `tbconfig`, `tbackendconfig`) es un CRD frontend con espacio de nombres que te permite administrar backends de Trident usando  `kubectl`. Los administradores de Kubernetes y almacenamiento ahora pueden crear y administrar backends directamente a través de la CLI de Kubernetes sin necesitar una utilidad de línea de comandos dedicada (`tridentctl`).
@@ -72,6 +73,7 @@ TIP: Los backends que fueron creados con  `tridentctl` no tienen un objeto  `Tri
 
 
 
+[[steps-overview]]
 == Resumen de pasos
 
 Para crear un nuevo backend usando  `kubectl`, debes hacer lo siguiente:
@@ -84,6 +86,7 @@ Después de crear un backend, puedes observar su estado usando  `kubectl get tbc
 
 
 
+[[step-1-create-a-kubernetes-secret]]
 == Paso 1: crea un secreto de Kubernetes
 
 Crea un secreto que contenga las credenciales de acceso para el backend. Esto es único para cada servicio o plataforma de almacenamiento. Aquí tienes un ejemplo:
@@ -176,6 +179,7 @@ El secreto creado en este paso se va a referenciar en el campo  `spec.credential
 
 
 
+[[step-2-create-the-tridentbackendconfig-cr]]
 == Paso 2: crea el  `TridentBackendConfig`CR
 
 Ya estás listo para crear tu `TridentBackendConfig` CR. En este ejemplo, se crea un backend que usa el `ontap-san` driver mediante el objeto `TridentBackendConfig` que se muestra a continuación:
@@ -202,6 +206,7 @@ spec:
 ----
 
 
+[[step-3-verify-the-status-of-the-tridentbackendconfig-cr]]
 == Paso 3: verifica el estado de la  `TridentBackendConfig`CR
 
 Ahora que creaste la  `TridentBackendConfig`CR, puedes verificar el estado. Mira el siguiente ejemplo:
@@ -232,6 +237,7 @@ En esta etapa, ¡el backend se ha creado correctamente! Hay varias operaciones q
 
 
 
+[[optional-step-4-get-more-details]]
 == (Opcional) Paso 4: obtén más detalles
 
 Puedes ejecutar el siguiente comando para obtener más información sobre tu backend:

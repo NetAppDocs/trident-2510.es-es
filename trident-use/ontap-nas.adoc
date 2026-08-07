@@ -16,6 +16,7 @@ Conoce cómo configurar un backend de ONTAP con los controladores NAS de ONTAP y
 
 
 
+[[ontap-nas-driver-details]]
 == Detalles del controlador ONTAP NAS
 
 Trident proporciona los siguientes controladores de almacenamiento NAS para comunicarse con el clúster ONTAP. Los modos de acceso compatibles son: _ReadWriteOnce_ (RWO), _ReadOnlyMany_ (ROX), _ReadWriteMany_ (RWX), _ReadWriteOncePod_ (RWOP).
@@ -68,6 +69,7 @@ RWO, ROX, RWX, RWOP
 ====
 
 
+[[user-permissions]]
 == Permisos de usuario
 
 Trident espera ejecutarse como administrador de ONTAP o SVM, normalmente usando el usuario cluster `admin` o un usuario SVM `vsadmin`, o un usuario con un nombre diferente que tenga el mismo rol.

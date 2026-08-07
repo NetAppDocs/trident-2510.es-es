@@ -16,6 +16,7 @@ Puedes desplegar el operador Trident e instalar Trident usando Helm. Este proces
 
 
 
+[[critical-information-about-trident-25-10]]
 == Información crítica sobre Trident 25.10
 
 *Debes leer la siguiente información crítica sobre Trident.*
@@ -36,6 +37,7 @@ El uso de una configuración sin multivía o el uso de `find_multipaths: yes` o 
 ====
 
 
+[[deploy-the-trident-operator-and-install-trident-using-helm]]
 == Implementa el operador Trident e instala Trident usando Helm
 
 Usando el link:https://artifacthub.io/packages/helm/netapp-trident/trident-operator["Helm Chart"^] de Trident, puedes desplegar el operador Trident e instalar Trident en un solo paso.
@@ -43,7 +45,7 @@ Usando el link:https://artifacthub.io/packages/helm/netapp-trident/trident-opera
 Revisa link:../trident-install/kubernetes-deploy.html["la visión general de la instalación"] para asegurarte de que cumpliste los requisitos previos de instalación y seleccionaste la opción de instalación correcta para tu entorno.
 
 .Antes de empezar
-Además de link:../trident-install/kubernetes-deploy.html#before-you-deploy["requisitos previos de despliegue"] tú necesitas link:https://v3.helm.sh/["Helm versión 3"^].
+Además de link:kubernetes-deploy.html#before-you-begin["requisitos previos de despliegue"] tú necesitas link:https://v3.helm.sh/["Helm versión 3"^].
 
 .Pasos
 . Agrega el repositorio Trident Helm:
@@ -68,6 +70,7 @@ Puedes usar `helm list` para revisar detalles de la instalación como nombre, es
 
 
 
+[[pass-configuration-data-during-install]]
 == Pasa los datos de configuración durante la instalación
 
 Hay dos formas de pasar datos de configuración durante la instalación:
@@ -94,6 +97,7 @@ helm install <name> netapp-trident/trident-operator --version 100.2506.0  --crea
 ----
 
 
+[[configuration-options]]
 == Opciones de configuración
 
 Esta tabla y el archivo `values.yaml`, que es parte del Helm chart, proporcionan la lista de claves y sus valores predeterminados.
@@ -380,6 +384,7 @@ Habilita la conexión en red del host para el controlador Trident. Esto es útil
 |===
 
 
+[[understanding-controller-pods-and-node-pods]]
 === Entender los pods de controlador y los pods de nodo
 
 Trident se ejecuta como un pod controlador único, más un pod de nodo en cada nodo trabajador del clúster. El pod de nodo debe estar ejecutándose en cualquier host donde quieras montar potencialmente un volumen Trident.

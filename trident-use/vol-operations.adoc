@@ -16,6 +16,7 @@ Conoce las funciones que ofrece Trident para gestionar tus volúmenes.
 
 
 
+[[managing-volumes]]
 == Gestión de volúmenes
 
 Consulta lo siguiente para saber cómo puedes gestionar tus volúmenes con Trident.

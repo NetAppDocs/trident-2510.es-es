@@ -22,6 +22,7 @@ Al usar Trident con Amazon FSx for NetApp ONTAP, puedes asegurarte de que los cl
 
 
 
+[[requirements]]
 == Requisitos
 
 Además de link:../trident-get-started/requirements.html["Requisitos de Trident"], para integrar FSx for ONTAP con Trident, necesitas:
@@ -37,6 +38,7 @@ NOTE: Asegúrate de seguir los pasos de preparación de nodo necesarios para Ama
 
 
 
+[[considerations]]
 == Consideraciones
 
 * Volúmenes SMB:
@@ -55,6 +57,7 @@ NOTE: Si estás especificando una función de IAM para Trident, entonces puedes 
 
 
 
+[[simultaneous-usage-of-trident-saniscsi-and-ebs-csi-driver]]
 === Uso simultáneo de Trident SAN/iSCSI y el controlador EBS-CSI
 
 Si planeas usar controladores ontap-san (por ejemplo, iSCSI) con AWS (EKS, ROSA, EC2 o cualquier otra instancia), la configuración de multivía requerida en los nodos podría entrar en conflicto con el controlador CSI de Amazon Elastic Block Store (EBS). Para asegurarte de que la multivía funcione sin interferir con los discos EBS en el mismo nodo, necesitas excluir EBS en tu configuración de multivía. Este ejemplo muestra un `multipath.conf` archivo que incluye la configuración requerida de Trident y excluye los discos EBS de la multivía:
@@ -73,6 +76,7 @@ blacklist {
 ----
 
 
+[[authentication]]
 == Autenticación
 
 Trident ofrece dos modos de autenticación.
@@ -93,6 +97,7 @@ Para obtener detalles sobre cómo habilitar la autenticación, consulta la auten
 
 
 
+[[tested-amazon-machine-images-amis]]
 == Imágenes de máquina de Amazon (AMIs) probadas
 
 El clúster EKS es compatible con varios sistemas operativos, pero AWS ha optimizado ciertas Amazon Machine Images (AMIs) para contenedores y EKS. Las siguientes AMIs se han probado con NetApp Trident 25.02.
@@ -143,6 +148,7 @@ NOTE: Si la AMI que buscas no aparece aquí, no significa que no sea compatible;
 
 
 
+[[find-more-information]]
 == Encuentra más información
 
 * https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Documentación de Amazon FSx para NetApp ONTAP"^]

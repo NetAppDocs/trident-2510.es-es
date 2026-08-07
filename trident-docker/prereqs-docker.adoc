@@ -16,6 +16,7 @@ Tienes que instalar y configurar los requisitos previos de protocolo necesarios 
 
 
 
+[[verify-the-requirements]]
 == Verifica los requisitos
 
 * Verifica que tu implementación cumple con todos los link:../trident-get-started/requirements.html["requisitos"].
@@ -30,6 +31,7 @@ docker --version
 
 
 
+[[nfs-tools]]
 === Herramientas NFS
 
 Instala las herramientas NFS usando los comandos para tu sistema operativo.
@@ -56,6 +58,7 @@ WARNING: Reinicia tus nodos trabajadores después de instalar las herramientas N
 
 
 
+[[iscsi-tools]]
 === herramientas iSCSI
 
 Instala las herramientas iSCSI usando los comandos para tu sistema operativo.
@@ -158,6 +161,7 @@ sudo systemctl status open-iscsi
 ====
 
 
+[[nvme-tools]]
 == Herramientas NVMe
 
 Instala las herramientas NVMe usando los comandos para tu sistema operativo.
@@ -192,6 +196,7 @@ sudo modprobe nvme-tcp
 ====
 
 
+[[fc-tools]]
 == Herramientas FC
 
 Instala las herramientas de FC usando los comandos para tu sistema operativo.

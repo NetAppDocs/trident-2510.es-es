@@ -16,6 +16,7 @@ Puedes instalar Trident usando `tridentctl`. Este proceso aplica a instalaciones
 
 
 
+[[critical-information-about-trident10]]
 == Información crítica sobre Trident10
 
 *Debes leer la siguiente información crítica sobre Trident.*
@@ -33,6 +34,7 @@ El uso de una configuración sin multivía o el uso de `find_multipaths: yes` o 
 ====
 
 
+[[install-trident-using-tridentctl]]
 == Instala Trident usando `tridentctl`
 
 Revisa link:../trident-install/kubernetes-deploy.html["la visión general de la instalación"] para asegurarte de que cumpliste los requisitos previos de instalación y seleccionaste la opción de instalación correcta para tu entorno.
@@ -69,6 +71,7 @@ kubectl run -i --tty ping --image=busybox --restart=Never --rm -- \
 ====
 
 
+[[step-1-download-the-trident-installer-package]]
 == Paso 1: descarga el paquete de instalación de Trident
 
 El paquete instalador de Trident crea un pod Trident, configura los objetos CRD que se usan para mantener su estado e inicializa los sidecars CSI para hacer cosas como aprovisionar y adjuntar volúmenes a los hosts del clúster. Descarga y extrae la última versión del instalador de Trident desde link:https://github.com/NetApp/trident/releases/latest["la sección _Assets_ en GitHub"^]. Actualiza _<trident-installer-XX.XX.X.tar.gz>_ en el ejemplo con la versión de Trident que elijas.
@@ -81,6 +84,7 @@ cd trident-installer
 ----
 
 
+[[step-2-install-trident]]
 == Paso 2: instalar Trident
 
 Instala Trident en el espacio de nombres que quieras ejecutando el comando `tridentctl install`. Puedes añadir argumentos adicionales para especificar la ubicación del registro de imágenes.
@@ -132,12 +136,14 @@ INFO Trident installation succeeded.
 ----
 
 
+[[verify-the-installation]]
 == Verifica la instalación
 
 Puedes verificar tu instalación usando el estado de creación de pods o `tridentctl`.
 
 
 
+[[using-pod-creation-status]]
 === Uso del estado de creación de pods
 
 Puedes confirmar si la instalación de Trident se completó revisando el estado de los pods creados:
@@ -155,6 +161,7 @@ NOTE: Si el instalador no se completa correctamente o `trident-controller-<gener
 
 
 
+[[using-tridentctl]]
 === Usando `tridentctl`
 
 Puedes usar `tridentctl` para comprobar la versión de Trident instalada.
@@ -171,6 +178,7 @@ Puedes usar `tridentctl` para comprobar la versión de Trident instalada.
 ----
 
 
+[[sample-configurations]]
 == Configuraciones de ejemplo
 
 Los siguientes ejemplos proporcionan configuraciones de muestra para instalar Trident usando `tridentctl`.

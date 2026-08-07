@@ -16,6 +16,7 @@ Con Trident, puedes crear nuevos volúmenes usando volúmenes existentes o insta
 
 
 
+[[prerequisites]]
 == Prerrequisitos
 
 Antes de clonar volúmenes, asegúrate de que los backends de origen y destino sean del mismo tipo y tengan la misma clase de almacenamiento.
@@ -25,6 +26,7 @@ NOTE: La clonación entre espacios de nombres solo se admite para los controlado
 
 
 
+[[quick-start]]
 == Inicio rápido
 
 Puedes configurar la clonación de volumen en solo unos pocos pasos.
@@ -47,6 +49,7 @@ El propietario del espacio de nombres de destino crea PVC para clonar la PVC del
 
 
 
+[[configure-the-source-and-destination-namespaces]]
 == Configura los espacios de nombres de origen y destino
 
 Para garantizar la seguridad, clonar volúmenes entre espacios de nombres requiere la colaboración y acción del propietario del espacio de nombres de origen, el administrador del clúster y el propietario del espacio de nombres de destino. El rol del usuario se indica en cada paso.
@@ -121,6 +124,7 @@ spec:
 
 
 
+[[limitations]]
 == Limitaciones
 
 * Para los PVC aprovisionados usando controladores ontap-nas-economy, no se admiten clones de solo lectura.

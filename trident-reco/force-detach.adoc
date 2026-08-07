@@ -16,6 +16,7 @@ La función de separación forzada de Trident te permite separar automáticament
 
 
 
+[[details-about-force-detach]]
 == Detalles sobre la desconexión forzada
 
 Force detach está disponible para `ontap-san`, `ontap-san-economy`, `ontap-nas` y `ontap-nas-economy` solamente. Antes de activar force detach, debe estar habilitado el apagado no pacífico de nodos (NGNS) en el clúster de Kubernetes. NGNS está habilitado por defecto para Kubernetes 1.28 y versiones superiores. Para más información, consulta link:https://kubernetes.io/docs/concepts/cluster-administration/node-shutdown/#non-graceful-node-shutdown["Kubernetes: apagado no controlado del nodo"^].
@@ -44,12 +45,14 @@ Cuando se restablezca la salud del nodo y se elimine la taint, Trident hará lo 
 
 
 
+[[details-about-automated-failover]]
 == Detalles sobre la conmutación automática al respaldo
 
 Puedes automatizar el proceso de desconexión forzada mediante la integración con link:https://github.com/medik8s/node-healthcheck-operator["operador de verificación de estado del nodo (NHC)"^]. Cuando ocurre un fallo en un nodo, NHC activa la remediación de nodos Trident (TNR) y la desconexión forzada automáticamente creando un CR TridentNodeRemediation en el espacio de nombres de Trident que define el nodo fallido. TNR se crea solo cuando falla un nodo y NHC la elimina una vez que el nodo vuelve a estar en línea o se elimina.
 
 
 
+[[failed-node-pod-removal-process]]
 === Proceso de eliminación de pod de nodo con fallo
 
 La conmutación automática al respaldo selecciona las cargas de trabajo que se eliminarán del nodo fallido. Cuando se crea un TNR, el controlador del TNR marca el nodo como sucio, impide la publicación de nuevos volúmenes y comienza a eliminar los pods compatibles con la desconexión forzada y sus conexiones de volumen.
@@ -88,6 +91,7 @@ Estas anotaciones se pueden aplicar a cualquier pod.
 ====
 
 
+[[tridentnoderemediation-cr]]
 === CR de TridentNodeRemediation
 
 El CR TridentNodeRemediation (TNR) define un nodo fallido. El nombre del TNR es el nombre del nodo fallido.
@@ -135,6 +139,7 @@ Los TNR pueden estar en uno de los siguientes estados:
 
 
 
+[[enabling-automated-failover]]
 === Habilitar la conmutación automática al respaldo
 
 *Prerrequisitos*:
@@ -198,6 +203,7 @@ Para obtener opciones de configuración adicionales, consulta link:https://githu
 
 
 
+[[additional-setup-information]]
 === Información adicional de configuración
 
 Cuando se instala Trident con force-detach habilitado, se crean automáticamente dos recursos adicionales en el espacio de nombres de Trident para facilitar la integración con NHC: TridentNodeRemediationTemplate (TNRT) y ClusterRole.
@@ -246,6 +252,7 @@ rules:
 ----
 
 
+[[k8s-cluster-upgrades-and-maintenance]]
 === Actualizaciones y mantenimiento del clúster K8s
 
 Para evitar cualquier conmutación automática al respaldo, pausa la conmutación automática al respaldo durante el mantenimiento o las actualizaciones de K8s, cuando se espera que los nodos se apaguen o se reinicien. Puedes pausar el CR de NHC (descrito arriba) parchando su CR:
@@ -256,6 +263,7 @@ Esto pausa la conmutación automática al respaldo. Para volver a habilitar la c
 
 
 
+[[limitations]]
 === Limitaciones
 
 * Las operaciones de E/S solo se impiden en los nodos fallidos para los volúmenes compatibles con force-detach. Solo los pods que usan volúmenes/PVCs compatibles con force-detach se eliminan automáticamente.
@@ -264,6 +272,7 @@ Esto pausa la conmutación automática al respaldo. Para volver a habilitar la c
 
 
 
+[[integrating-custom-node-health-check-solutions]]
 === Integración de soluciones personalizadas de comprobación del estado del nodo
 
 Puedes reemplazar Node Healthcheck Operator con herramientas alternativas de detección de fallos de nodo para activar la conmutación automática al respaldo. Para garantizar la compatibilidad con el mecanismo de conmutación automática al respaldo, tu solución personalizada debe:

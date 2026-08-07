@@ -16,6 +16,7 @@ Conoce cómo realizar operaciones de administración de backend usando  `kubectl
 
 
 
+[[delete-a-backend]]
 == Eliminar un backend
 
 Al eliminar un `TridentBackendConfig`, le indicas a Trident que elimine o conserve los backends (según `deletionPolicy`). Para eliminar un backend, asegúrate de que `deletionPolicy` esté configurado para eliminar. Para eliminar solo el `TridentBackendConfig`, asegúrate de que `deletionPolicy` esté configurado para conservar. Esto asegura que el backend siga presente y se pueda administrar usando `tridentctl`.
@@ -30,6 +31,7 @@ Trident no elimina los secretos de Kubernetes que estaban en uso por  `TridentBa
 
 
 
+[[view-the-existing-backends]]
 == Ver los backends existentes
 
 Ejecuta el siguiente comando:
@@ -42,6 +44,7 @@ También puedes ejecutar  `tridentctl get backend -n trident` o  `tridentctl get
 
 
 
+[[update-a-backend]]
 == Actualizar un backend
 
 Puede haber varias razones para actualizar un backend:

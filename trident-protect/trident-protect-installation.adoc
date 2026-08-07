@@ -18,6 +18,7 @@ Si tu entorno cumple los requisitos para Trident Protect, puedes seguir estos pa
 
 
 
+[[install-trident-protect]]
 == Instala Trident Protect
 
 [role="tabbed-block"]

@@ -18,6 +18,7 @@ Los siguientes problemas conocidos afectan la versión actual:
 
 
 
+[[restoring-restic-backups-of-large-files-can-fail]]
 == Restaurar backups de Restic de archivos grandes puede fallar
 
 Al restaurar archivos de 30GB o más desde una copia de seguridad de Amazon S3 hecha con Restic, la operación de restauración puede fallar. Como solución alternativa, haz una copia de seguridad de los datos usando Kopia como data mover (Kopia es el data mover predeterminado para las copias de seguridad). Consulta https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-protect-apps.html["Protege las aplicaciones usando Trident Protect"^] para instrucciones.

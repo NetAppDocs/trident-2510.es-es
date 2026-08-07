@@ -13,6 +13,7 @@ summary: 'Al usar Trident con Amazon FSx for NetApp ONTAP, puedes asegurarte de 
 
 
 
+[[ontap-san-and-nas-driver-integration]]
 == Integración de controladores SAN y NAS de ONTAP
 
 Para crear un backend de almacenamiento, necesitas crear un archivo de configuración en formato JSON o YAML. El archivo debe especificar el tipo de almacenamiento que quieres (NAS o SAN), el sistema de archivos, la SVM de la que se obtendrá y cómo autenticarse con ella. El siguiente ejemplo muestra cómo definir almacenamiento basado en NAS y usar un secreto de AWS para guardar las credenciales de la SVM que quieres usar:
@@ -100,6 +101,7 @@ backend-tbc-ontap-nas        tbc-ontap-nas        933e0071-66ce-4324-b9ff-f96d91
 
 
 
+[[fsx-for-ontap-driver-details]]
 == Detalles del controlador de FSx for ONTAP
 
 Puedes integrar Trident con Amazon FSx for NetApp ONTAP usando los siguientes controladores:
@@ -132,6 +134,7 @@ backend-fsx-ontap-nas   backend-fsx-ontap-nas   7a551921-997c-4c37-a1d1-f2f4c87f
 ----
 
 
+[[backend-advanced-configuration-and-examples]]
 == Configuración avanzada de backend y ejemplos
 
 Consulta la siguiente tabla para ver las opciones de configuración del backend:
@@ -224,6 +227,7 @@ Consulta la siguiente tabla para ver las opciones de configuración del backend:
 |===
 
 
+[[backend-configuration-options-for-provisioning-volumes]]
 == Opciones de configuración de backend para aprovisionar volúmenes
 
 Puedes controlar el aprovisionamiento predeterminado usando estas opciones en la  `defaults` sección de la configuración. Por ejemplo, mira los ejemplos de configuración abajo.
@@ -257,7 +261,7 @@ Puedes controlar el aprovisionamiento predeterminado usando estas opciones en la
 | `encryption` | Habilita NetApp Volume Encryption (NVE) en el nuevo volumen; el valor predeterminado es  `false`. NVE debe tener licencia y estar habilitado en el clúster para usar esta opción. Si NAE está habilitado en el backend, cualquier volumen aprovisionado en Trident tendrá NAE habilitado. Para más información, consulta: link:../trident-reco/security-reco.html["Cómo funciona Trident con NVE y NAE"]. | `false` 
 
 
-| `luksEncryption` | Habilita el cifrado LUKS. Consulta link:../trident-reco/security-reco.html#Use-Linux-Unified-Key-Setup-(LUKS)["Usa Linux Unified Key Setup (LUKS)"]. Solo SAN. | "" 
+| `luksEncryption` | Activa el cifrado LUKS. Consulta link:../trident-reco/security-reco.html["Usa Linux Unified Key Setup (LUKS)"]. Solo para SAN. | "" 
 
 
 | `tieringPolicy` | Política de tiering a usar	`none` |  
@@ -270,6 +274,7 @@ Puedes controlar el aprovisionamiento predeterminado usando estas opciones en la
 |===
 
 
+[[provision-smb-volumes]]
 == Aprovisionar volúmenes SMB
 
 Puedes aprovisionar volúmenes SMB usando el `ontap-nas` driver. Antes de completar <<Integración de controladores SAN y NAS de ONTAP>> completa estos pasos: link:https://docs.netapp.com/us-en/trident/trident-use/worker-node-prep.html#prepare-to-provision-smb-volumes["Prepárate para aprovisionar volúmenes SMB"].

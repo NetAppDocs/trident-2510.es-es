@@ -17,6 +17,7 @@ Puedes proteger las aplicaciones con Trident Protect creando recursos personaliz
 
 
 
+[[whats-next]]
 == ¿Qué sigue?
 
 Puedes informarte sobre los requisitos de Trident Protect antes de instalarlo:

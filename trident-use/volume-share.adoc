@@ -16,6 +16,7 @@ Con Trident, puedes crear un volumen en un espacio de nombres primario y compart
 
 
 
+[[features]]
 == Funciones
 
 El CR TridentVolumeReference te permite compartir de forma segura volúmenes NFS ReadWriteMany (RWX) entre uno o varios espacios de nombres de Kubernetes. Esta solución nativa de Kubernetes tiene los siguientes beneficios:
@@ -31,6 +32,7 @@ image::cross-namespace-sharing.png[Un diagrama conceptual de la compartición en
 
 
 
+[[quick-start]]
 == Inicio rápido
 
 Puedes configurar el uso compartido de volúmenes NFS en unos pocos pasos.
@@ -53,6 +55,7 @@ El propietario del espacio de nombres de destino crea el PVC subordinado para us
 
 
 
+[[configure-the-source-and-destination-namespaces]]
 == Configura los espacios de nombres de origen y destino
 
 Para garantizar la seguridad, el uso compartido entre espacios de nombres requiere la colaboración y acción del propietario del espacio de nombres de origen, el administrador del clúster y el propietario del espacio de nombres de destino. El rol del usuario se designa en cada paso.
@@ -133,12 +136,14 @@ Trident lee la `shareFromPVC` anotación en el PVC de destino y crea el PV de de
 
 
 
+[[delete-a-shared-volume]]
 == Eliminar un volumen compartido
 
 Puedes eliminar un volumen que está compartido entre varios espacios de nombres. Trident quitará el acceso al volumen en el espacio de nombres de origen y mantendrá el acceso para los demás espacios de nombres que comparten el volumen. Cuando se eliminan todos los espacios de nombres que hacen referencia al volumen, Trident elimina el volumen.
 
 
 
+[[use-tridentctl-get-to-query-subordinate-volumes]]
 == Usa `tridentctl get` para consultar volúmenes subordinados
 
 Usando la utilidad[`tridentctl`, puedes ejecutar el comando `get` para obtener volúmenes subordinados. Para más información, consulta el enlace:../trident-reference/trident-cl.html[`tridentctl` comandos y opciones].
@@ -157,6 +162,7 @@ Banderas:
 
 
 
+[[limitations]]
 == Limitaciones
 
 * Trident no puede evitar que los espacios de nombres de destino escriban en el volumen compartido. Deberías usar el bloqueo de archivos u otros procesos para evitar sobrescribir los datos del volumen compartido.
@@ -166,6 +172,7 @@ Banderas:
 
 
 
+[[for-more-information]]
 == Para más información
 
 Para obtener más información sobre el acceso a volúmenes entre espacios de nombres:

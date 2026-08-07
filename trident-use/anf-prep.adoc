@@ -16,6 +16,7 @@ Antes de que puedas configurar tu backend de Azure NetApp Files, necesitas asegu
 
 
 
+[[prerequisites-for-nfs-and-smb-volumes]]
 == Requisitos previos para volúmenes NFS y SMB
 
 Si usas Azure NetApp Files por primera vez o en una nueva ubicación, necesitas hacer una configuración inicial para preparar Azure NetApp Files y crear un volumen NFS. Consulta  https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-quickstart-set-up-account-create-volumes["Azure: configura Azure NetApp Files y crea un volumen NFS"^].
@@ -91,6 +92,7 @@ Para configurar y usar un  https://azure.microsoft.com/en-us/products/netapp/["A
 
 
 
+[[additional-requirements-for-smb-volumes]]
 == Requisitos adicionales para volúmenes SMB
 
 Para crear un volumen SMB, debes tener:

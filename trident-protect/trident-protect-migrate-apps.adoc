@@ -21,12 +21,14 @@ NOTE: Cuando migras una aplicación, todos los ganchos de ejecución configurado
 
 
 
+[[backup-and-restore-operations]]
 == Operaciones de backup y restauración
 
 Para realizar operaciones de backup y restauración en los siguientes escenarios, puedes automatizar tareas específicas de backup y restauración.
 
 
 
+[[clone-to-same-cluster]]
 === Clonar en el mismo clúster
 
 Para clonar una aplicación en el mismo clúster, crea una instantánea o backup y restaura los datos en el mismo clúster.
@@ -48,6 +50,7 @@ Para clonar una aplicación en el mismo clúster, crea una instantánea o backup
 
 
 
+[[clone-to-different-cluster]]
 === Clonar a clúster diferente
 
 Para clonar una aplicación en un clúster diferente (realizar un clon entre clústeres), crea un backup en el clúster de origen y luego restaura el backup en un clúster diferente. Asegúrate de que Trident Protect está instalado en el clúster de destino.
@@ -63,6 +66,7 @@ NOTE: Puedes replicar una aplicación entre diferentes clústeres usando link:tr
 
 
 
+[[migrate-applications-from-one-storage-class-to-another-storage-class]]
 == Migra aplicaciones de una clase de almacenamiento a otra clase de almacenamiento
 
 Puedes migrar aplicaciones de una clase de almacenamiento a otra diferente restaurando un backup en la clase de almacenamiento de destino.

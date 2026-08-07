@@ -18,12 +18,14 @@ Puedes definir una aplicación que quieras gestionar con Trident Protect creando
 
 
 
+[[create-an-appvault-cr]]
 == Crea un CR de AppVault
 
 Necesitas crear un CR de AppVault que se usará cuando realices operaciones de protección de datos en la aplicación, y el CR de AppVault debe estar en el clúster donde está instalado Trident Protect. El CR de AppVault es específico para tu entorno; para ejemplos de CR de AppVault, consulta link:trident-protect-appvault-custom-resources.html["AppVault recursos personalizados."]
 
 
 
+[[define-an-application]]
 == Define una aplicación
 
 Necesitas definir cada aplicación que quieras gestionar con Trident Protect. Puedes definir una aplicación para gestionarla creando manualmente un CR de aplicación o usando la CLI de Trident Protect.

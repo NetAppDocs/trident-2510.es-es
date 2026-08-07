@@ -21,6 +21,7 @@ NOTE: Puedes configurar Trident Protect para congelar y descongelar sistemas de 
 
 
 
+[[create-an-on-demand-snapshot]]
 == Crea una instantánea a pedido
 
 Puedes crear una instantánea a pedido en cualquier momento.
@@ -84,6 +85,7 @@ tridentctl-protect create snapshot <my_snapshot_name> --appvault <my_appvault_na
 ====
 
 
+[[create-an-on-demand-backup]]
 == Crear un backup a pedido
 
 Puedes hacer un backup de una app en cualquier momento.
@@ -168,6 +170,7 @@ Opcionalmente, puedes usar la  `--full-backup` flag para especificar si un backu
 ====
 
 
+[[supported-backup-annotations]]
 === Anotaciones de backup compatibles
 
 La siguiente tabla describe las anotaciones que puedes usar al crear una CR de backup:
@@ -193,6 +196,7 @@ La siguiente tabla describe las anotaciones que puedes usar al crear una CR de b
 |===
 
 
+[[create-a-data-protection-schedule]]
 == Crea un cronograma de protección de datos
 
 Una política de protección protege una app creando snapshots, backups o ambos en una programación definida. Puedes elegir crear snapshots y backups cada hora, día, semana y mes, y puedes especificar la cantidad de copias que quieres conservar. Puedes programar un backup completo no incremental usando la anotación full-backup-rule. Por defecto, todos los backups son incrementales. Realizar un backup completo periódicamente, junto con backups incrementales entre medio, ayuda a reducir el riesgo asociado con las restauraciones.
@@ -354,6 +358,7 @@ NOTE: La `--full-backup-rule` flag no funciona con granularidad horaria, semanal
 ====
 
 
+[[supported-schedule-annotations]]
 === Anotaciones de horario compatibles
 
 En la tabla siguiente se describen las anotaciones que puedes usar al crear un CR de planificación:
@@ -379,6 +384,7 @@ En la tabla siguiente se describen las anotaciones que puedes usar al crear un C
 |===
 
 
+[[delete-a-snapshot]]
 == Borrar una instantánea
 
 Elimina las instantáneas programadas o bajo demanda que ya no necesitas.
@@ -394,6 +400,7 @@ kubectl delete snapshot <snapshot_name> -n my-app-namespace
 
 
 
+[[delete-a-backup]]
 == Eliminar un backup
 
 Elimina los backups programados o bajo demanda que ya no necesites.
@@ -412,6 +419,7 @@ kubectl delete backup <backup_name> -n my-app-namespace
 
 
 
+[[check-the-status-of-a-backup-operation]]
 == Comprobar el estado de una operación de backup
 
 Puedes usar la línea de comandos para comprobar el estado de un proceso de backup que está en curso, ha terminado o ha fallado.
@@ -427,6 +435,7 @@ kubectl get backup -n <namespace_name> <my_backup_cr_name> -o jsonpath='{.status
 
 
 
+[[enable-backup-and-restore-for-azure-netapp-files-anf-operations]]
 == Habilita el backup y la restauración para las operaciones de azure-netapp-files (ANF)
 
 Si has instalado Trident Protect, puedes activar la funcionalidad de backup y restauración con gestión eficiente del espacio para backends de almacenamiento que usan la clase de almacenamiento azure-netapp-files y que fueron creados antes de Trident 24.06. Esta funcionalidad funciona con volúmenes NFSv4 y no consume espacio adicional del capacity pool.

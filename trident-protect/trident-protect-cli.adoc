@@ -18,6 +18,7 @@ Puedes usar el complemento de línea de comandos de Trident Protect, que es una 
 
 
 
+[[install-the-trident-protect-cli-plugin]]
 == Instala el plugin CLI de Trident Protect
 
 Antes de usar la utilidad de línea de comandos, necesitas instalarla en la máquina que usas para acceder a tu clúster. Sigue estos pasos, dependiendo de si tu máquina usa una CPU x64 o ARM.
@@ -98,6 +99,7 @@ NOTE: Copiar el complemento en una ubicación en tu variable PATH te permite usa
 
 
 
+[[view-trident-cli-plugin-help]]
 == Ver la ayuda del plugin CLI de Trident
 
 Puedes usar las funciones de ayuda integradas en el plugin para obtener ayuda detallada sobre las capacidades del plugin:
@@ -113,6 +115,7 @@ tridentctl-protect help
 
 
 
+[[enable-command-auto-completion]]
 == Habilitar el autocompletado de comandos
 
 Después de que hayas instalado el complemento CLI de Trident Protect, puedes habilitar el autocompletado para ciertos comandos.

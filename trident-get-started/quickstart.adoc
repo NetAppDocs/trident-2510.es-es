@@ -57,6 +57,7 @@ link:../trident-use/vol-provision.html["Aprovisiona un volumen"]
 
 
 
+[[whats-next]]
 == ¿Qué sigue?
 
 Ahora puedes agregar backends adicionales, gestionar clases de almacenamiento, gestionar backends y realizar operaciones de volumen.

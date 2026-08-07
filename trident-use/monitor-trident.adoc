@@ -16,6 +16,7 @@ Trident proporciona un conjunto de puntos finales de métricas de Prometheus que
 
 
 
+[[overview]]
 == Descripción general
 
 Las métricas proporcionadas por Trident te permiten hacer lo siguiente:
@@ -36,12 +37,14 @@ NOTE: De forma predeterminada, las métricas de Trident se exponen en el puerto 
 
 
 
+[[step-1-define-a-prometheus-target]]
 == Paso 1: define un objetivo de Prometheus
 
 Deberías definir un objetivo de Prometheus para recopilar las métricas y obtener información sobre los backends que Trident administra, los volúmenes que crea y así sucesivamente. Consulta link:https://prometheus-operator.dev/docs/developer/getting-started/["Documentación de Prometheus Operator"^].
 
 
 
+[[step-2-create-a-prometheus-servicemonitor]]
 == Paso 2: Crea un ServiceMonitor de Prometheus
 
 Para consumir las métricas de Trident, debes crear un Prometheus ServiceMonitor que supervise el  `trident-csi` servicio y escuche en el  `metrics` puerto. Un ejemplo de ServiceMonitor se ve así:
@@ -73,6 +76,7 @@ Además de las métricas disponibles directamente desde Trident, kubelet expone 
 
 
 
+[[consume-trident-metrics-over-https]]
 === Consume métricas de Trident a través de HTTPS
 
 Para consumir métricas de Trident a través de HTTPS (puerto 8444), debes modificar la definición de ServiceMonitor para incluir la configuración TLS. También necesitas copiar el  `trident-csi` secreto desde el  `trident` namespace al namespace donde se está ejecutando Prometheus. Puedes hacer esto usando el siguiente comando:
@@ -126,6 +130,7 @@ Trident admite métricas HTTPS en todos los métodos de instalación: tridentctl
 
 
 
+[[step-3-query-trident-metrics-with-promql]]
 == Paso 3: Consultar métricas de Trident con PromQL
 
 PromQL es bueno para crear expresiones que devuelven series de tiempo o datos tabulares.
@@ -134,6 +139,7 @@ Aquí hay algunas consultas PromQL que puedes usar:
 
 
 
+[[get-trident-health-information]]
 === Obtén información de salud de Trident
 
 * **Porcentaje de respuestas HTTP 2XX de Trident**
@@ -159,6 +165,7 @@ sum by (operation) (trident_operation_duration_milliseconds_sum{success="true"})
 ----
 
 
+[[get-trident-usage-information]]
 === Obtén información sobre el uso de Trident
 
 * **Tamaño promedio del volumen**
@@ -177,6 +184,7 @@ sum (trident_volume_allocated_bytes) by (backend_uuid)
 ----
 
 
+[[get-individual-volume-usage]]
 === Obtén el uso del volumen individual
 
 
@@ -191,6 +199,7 @@ kubelet_volume_stats_used_bytes / kubelet_volume_stats_capacity_bytes * 100
 ----
 
 
+[[learn-about-trident-autosupport-telemetry]]
 == Conoce la telemetría de Trident AutoSupport
 
 De forma predeterminada, Trident envía métricas de Prometheus e información básica del backend a NetApp cada día.
@@ -228,6 +237,7 @@ items:
 
 
 
+[[disable-trident-metrics]]
 == Desactivar métricas de Trident
 
 Para **deshabilitar** que se informen las métricas, debes generar YAML personalizados (usando la  `--generate-custom-yaml` bandera) y editarlos para quitar la  `--metrics` bandera de ser invocada para el contenedor  `trident-main`.

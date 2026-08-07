@@ -23,6 +23,7 @@ En la configuración del backend de Trident, no necesitas especificar que tu sis
 
 
 
+[[backend-configuration-options]]
 == Opciones de configuración del backend
 
 Consulta la siguiente tabla para ver las opciones de configuración del backend:
@@ -158,6 +159,7 @@ Usa  `formatOptions` para especificar argumentos de la línea de comandos para e
 |===
 
 
+[[recommendations-for-using-formatoptions]]
 === Recomendaciones para usar formatOptions
 
 Trident recomienda las siguientes opciones para acelerar el proceso de formateo:
@@ -168,6 +170,7 @@ Trident recomienda las siguientes opciones para acelerar el proceso de formateo:
 
 
 
+[[authenticate-trident-to-a-backend-svm-using-active-directory-credentials]]
 === Autentica Trident en un SVM backend usando credenciales de Active Directory
 
 Puedes configurar Trident para que se autentique en una SVM de backend usando credenciales de Active Directory (AD). Antes de que una cuenta de AD pueda acceder a la SVM, tienes que configurar el acceso del controlador de dominio de AD al clúster o a la SVM. Para la administración del clúster con una cuenta de AD, tienes que crear un domain tunnel. Consulta link:https://docs.netapp.com/us-en/ontap/authentication/enable-ad-users-groups-access-cluster-svm-task.html["Configura el acceso al controlador de dominio de Active Directory en ONTAP"^] para más detalles.
@@ -190,6 +193,7 @@ Puedes configurar Trident para que se autentique en una SVM de backend usando cr
 
 
 
+[[backend-configuration-options-for-provisioning-volumes]]
 == Opciones de configuración de backend para aprovisionar volúmenes
 
 Puedes controlar el aprovisionamiento predeterminado usando estas opciones en la  `defaults` sección de la configuración. Por ejemplo, mira los ejemplos de configuración abajo.
@@ -233,6 +237,7 @@ Puedes controlar el aprovisionamiento predeterminado usando estas opciones en la
 |===
 
 
+[[volume-provisioning-examples]]
 === Ejemplos de aprovisionamiento de volumen
 
 Aquí tienes un ejemplo con valores predeterminados definidos:
@@ -278,6 +283,7 @@ Actualmente, cambiar el tamaño es la única manera de usar el nuevo cálculo pa
 
 
 
+[[minimal-configuration-examples]]
 == Ejemplos de configuración mínima
 
 Los siguientes ejemplos muestran configuraciones básicas que dejan la mayoría de los parámetros en sus valores predeterminados. Esta es la forma más fácil de definir un backend.
@@ -478,6 +484,7 @@ defaults:
 ====
 
 
+[[examples-of-backends-with-virtual-pools]]
 == Ejemplos de backends con pools virtuales
 
 En estos archivos de definición de backend de ejemplo, se establecen valores predeterminados específicos para todos los grupos de almacenamiento, como  `spaceReserve` en ninguno,  `spaceAllocation` en falso y  `encryption` en falso. Los grupos virtuales se definen en la sección de almacenamiento.
@@ -622,6 +629,7 @@ storage:
 ====
 
 
+[[map-backends-to-storageclasses]]
 == Asigna backends a StorageClasses
 
 Las siguientes definiciones de StorageClass se refieren a <<Ejemplos de backends con pools virtuales>>. Usando el campo  `parameters.selector`, cada StorageClass indica qué grupos virtuales pueden usarse para alojar un volumen. El volumen tendrá los aspectos definidos en el grupo virtual elegido.

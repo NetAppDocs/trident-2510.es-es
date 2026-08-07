@@ -16,6 +16,7 @@ El https://github.com/NetApp/trident/releases["Paquete de instalación de Triden
 
 
 
+[[commands-and-global-flags]]
 == Comandos y banderas globales
 
 Puedes ejecutar `tridentctl help` para obtener una lista de comandos disponibles para `tridentctl` o añadir la bandera `--help` a cualquier comando para ver una lista de opciones y banderas para ese comando específico.
@@ -70,10 +71,12 @@ WARNING: La interfaz REST de Trident se puede configurar para escuchar y servir 
 ====
 
 
+[[command-options-and-flags]]
 == Opciones de comando y flags
 
 
 
+[[create]]
 === crear
 
 Usa el  `create` comando para agregar un recurso a Trident.
@@ -85,6 +88,7 @@ Opciones:: `backend`: agrega un backend a Trident.
 
 
 
+[[delete]]
 === borrar
 
 Usa el comando  `delete` para eliminar uno o más recursos de Trident.
@@ -99,6 +103,7 @@ Opciones:: `backend`: eliminar uno o más backends de almacenamiento de Trident.
 
 
 
+[[get]]
 === obtener
 
 Usa el  `get` comando para obtener uno o más recursos de Trident.
@@ -116,6 +121,7 @@ Banderas:: `-h`, `--help`: Ayuda para volúmenes.
 
 
 
+[[images]]
 === imágenes
 
 Usa  `images`banderas para imprimir una tabla de las imágenes de contenedores que necesita Trident.
@@ -128,6 +134,7 @@ Banderas:: `-h`, `--help`: ayuda para imágenes.
 
 
 
+[[import-volume]]
 === importar volumen
 
 Usa el  `import volume` comando para importar un volumen existente a Trident.
@@ -142,6 +149,7 @@ Banderas:: `-f`, `--filename string`: ruta al archivo YAML o JSON PVC.
 
 
 
+[[install]]
 === instalar
 
 Usa las  `install` banderas para instalar Trident.
@@ -171,6 +179,7 @@ Banderas:: `--autosupport-image string`: La imagen del contenedor para Autosuppo
 
 
 
+[[logs]]
 === registros
 
 Usa  `logs`banderas para imprimir los registros de Trident.
@@ -187,6 +196,7 @@ Banderas:: `-a`, `--archive`: Crea un archivo de soporte con todos los registros
 
 
 
+[[send]]
 === enviar
 
 Usa el  `send` comando para enviar un recurso desde Trident.
@@ -198,6 +208,7 @@ Opciones:: `autosupport`: Envía un archivo de Autosupport a NetApp.
 
 
 
+[[uninstall]]
 === desinstalar
 
 Usa  `uninstall` flags para desinstalar Trident.
@@ -210,6 +221,7 @@ Banderas:: `-h, --help`: ayuda para la desinstalación.
 
 
 
+[[update]]
 === actualizar
 
 Usa el  `update` comando para modificar un recurso en Trident.
@@ -221,6 +233,7 @@ Opciones:: `backend`: actualiza un backend en Trident.
 
 
 
+[[update-backend-state]]
 === actualiza el estado del backend
 
 Usa el  `update backend state` comando para suspender o reanudar las operaciones del backend.
@@ -297,6 +310,7 @@ spec:
 ====
 
 
+[[version]]
 === versión
 
 Usa  `version` banderas para imprimir la versión de  `tridentctl` y el servicio Trident en ejecución.
@@ -309,6 +323,7 @@ Banderas:: `--client`: Solo versión de cliente (no requiere servidor).
 
 
 
+[[plugin-support]]
 == Compatibilidad con complementos
 
 Tridentctl admite plugins similares a kubectl. Tridentctl detecta un plugin si el nombre del archivo binario del plugin sigue el esquema "tridentctl-<plugin>" y el binario está ubicado en una carpeta listada en la variable de entorno PATH. Todos los plugins detectados se muestran en la sección de plugins de la ayuda de tridentctl. Opcionalmente, también puedes limitar la búsqueda especificando una carpeta de plugins en la variable de entorno TRIDENTCTL_PLUGIN_PATH (ejemplo: `TRIDENTCTL_PLUGIN_PATH=~/tridentctl-plugins/`). Si se usa la variable, tridentctl busca solo en la carpeta especificada.
